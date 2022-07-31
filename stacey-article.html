@@ -1,0 +1,33 @@
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <td bgcolor="#ffffff" align="center" style="padding: 15px 15px; ">
+        <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="600">
+          <tbody>
+            <tr>
+              <td style="padding: 0; ">
+                <table border="0" cellpadding="0" cellspacing="0" width="600">
+                  <tbody>
+                    <tr>
+                      <td align="left" valign="top" style="padding: 0; ">
+					  
+					  {% unless hide_thumbnail_url %}
+                        <img align="left" src="{{ thumbnail_url | default: 'https://uploads.goodbits.io/email_template_assets/v2/placeholders/110x110-placeholder.jpg'}}" width="110" height="110" border="0" style="width: 110px; padding-right: 20px; padding-bottom: 20px; ">
+						{% endunless %}
+						
+                        <div style="margin-bottom: 15px; padding-top: 0; font-size: 1.5em; font-family: Tahoma, Verdana, Segoe, sans-serif; font-weight: bold; word-break: break-word;"><a href="{{link_to}}" style="color:#2196f3;">{{ title | default: 'Article Title'}}</a><span style="font-weight: normal;"> | Publication Name</span></div>
+
+                        <div style="display: block; font-size: 1em; font-family:Georgia, Times, 'Times New Roman', serif; margin-top: 0; margin-bottom: 15px; line-height: 1.5; color: #4e4e4e; word-break: break-word;">{{ html_description | default: 'Write an article description here. Make it a teasery! We recommend it be 140 characters or less.'}}</div>
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
